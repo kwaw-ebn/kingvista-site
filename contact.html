@@ -1,67 +1,55 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Contact — KingVista's Enterprise</title>
-  <link rel="stylesheet" href="assets/css/styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact KingVista</title>
+  <meta name="description" content="Contact KingVista for Kente, clothing, and African designs. Send us a message or WhatsApp directly.">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <h1 class="brand">KingVista's Enterprise</h1>
-      <nav class="nav">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="general.html" class="nav-link">General Goods</a>
-        <a href="kente.html" class="nav-link">Kente & Accessories</a>
-        <a href="clothing.html" class="nav-link">Clothing</a>
-        <a href="contact.html" class="nav-link active">Contact</a>
-      </nav>
-    </div>
+  <header>
+    <img src="assets/images/logo.png" alt="KingVista Logo" style="height:60px;">
+    <h1>Contact Us</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="kente.html">Kente</a>
+      <a href="clothing.html">Clothing</a>
+      <a href="general.html">General</a>
+    </nav>
   </header>
 
-  <main class="container main">
-    <h2>Contact KingVista's Enterprise</h2>
-    <p class="muted">We’re happy to hear from you — message us directly or use the quick contact form below.</p>
+  <section style="max-width:600px;margin:40px auto;padding:20px;background:#fff;border-radius:10px;box-shadow:0 2px 5px rgba(0,0,0,0.1);">
+    <h2 style="text-align:center;">Send Us a Message</h2>
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <label for="name">Full Name:</label><br>
+      <input type="text" id="name" name="name" required style="width:100%;padding:10px;margin:8px 0;"><br>
 
-    <section style="margin-top:1.5rem;">
-      <form name="contact" method="POST" data-netlify="true" class="contact-form">
-        <input type="hidden" name="form-name" value="contact" />
-        <label for="name">Name</label>
-        <input id="name" name="name" required />
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="_replyto" required style="width:100%;padding:10px;margin:8px 0;"><br>
 
-        <label for="email">Email</label>
-        <input id="email" name="email" type="email" required />
+      <label for="message">Message:</label><br>
+      <textarea id="message" name="message" rows="5" required style="width:100%;padding:10px;margin:8px 0;"></textarea><br>
 
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
+      <button type="submit" style="background:#000;color:#fff;padding:10px 20px;border:none;border-radius:5px;cursor:pointer;">Send Message</button>
+    </form>
 
-        <button type="submit" class="btn">Send Message</button>
-      </form>
-    </section>
-
-    <section style="margin-top:2rem;">
-      <h3>Other Contact Options</h3>
-      <ul style="list-style:none;padding:0;">
-        <li>Email: <a href="mailto:abavistaone@gmail.com">abavistaone@gmail.com</a></li>
-        <li>WhatsApp: <a href="https://wa.me/233591117057" target="_blank">+233 59 111 7057</a></li>
-        <li>Facebook: KingVista Business Centre</li>
-      </ul>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <div>Email: <a href="mailto:abavistaone@gmail.com">abavistaone@gmail.com</a></div>
-      <div>WhatsApp: <a href="https://wa.me/233591117057">+233 59 111 7057</a></div>
+    <div style="text-align:center;margin-top:25px;">
+      <p style="font-weight:bold;">Or reach us directly:</p>
+      <p><i class="fa-solid fa-envelope"></i> <a href="mailto:abavistaone@gmail.com">abavistaone@gmail.com</a></p>
+      <p><i class="fa-brands fa-facebook"></i> <a href="https://facebook.com/KingvistaBusinessCenter" target="_blank">KingVista Business Center</a></p>
+      <p><i class="fa-brands fa-whatsapp"></i> <a href="https://wa.me/233591117057" target="_blank">+233 591 117 057</a></p>
     </div>
+  </section>
+
+  <footer>
+    <p>© 2025 KingVista | Designed with ❤️</p>
   </footer>
 
-  <a id="wh-btn" class="wh-btn" href="https://wa.me/233591117057?text=Hello%20KingVista!%20I'd%20like%20to%20make%20an%20inquiry." target="_blank" rel="noopener">
-    <span class="wh-icon">💬</span>
-    <span class="wh-label">Chat on WhatsApp</span>
-  </a>
-
-  <script src="assets/js/app.js"></script>
+  <!-- Floating WhatsApp button -->
+  <a href="https://wa.me/233591117057" target="_blank" class="whatsapp-float"><i class="fa-brands fa-whatsapp"></i></a>
 </body>
 </html>

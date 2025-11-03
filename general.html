@@ -1,50 +1,41 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>General Goods — KingVista's Enterprise</title>
-  <link rel="stylesheet" href="assets/css/styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KingVista - African Fashion & Kente Styles</title>
+  <meta name="description" content="Explore KingVista – Your destination for authentic Kente, clothing, and African fashion collections. Contact us today!">
+  <meta name="keywords" content="KingVista, Kente, African Fashion, Ghana, Clothing, Boutique, Handmade">
+  <meta name="author" content="KingVista">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <h1 class="brand">KingVista's Enterprise</h1>
-      <nav class="nav">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="general.html" class="nav-link active">General Goods</a>
-        <a href="kente.html" class="nav-link">Kente & Accessories</a>
-        <a href="clothing.html" class="nav-link">Clothing</a>
-        <a href="contact.html" class="nav-link">Contact</a>
-      </nav>
-    </div>
+  <header>
+    <h1>General Collection</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="kente.html">Kente</a>
+      <a href="clothing.html">Clothing</a>
+      <a href="contact.html">Contact</a>
+    </nav>
   </header>
 
-  <main class="container main">
-    <h2>Mini-Import & General Goods</h2>
-    <p class="muted">Browse our selection of electronics, phones, kitchen appliances, sofas and more.</p>
+  <section class="gallery">
+    <script>
+      const generalImages = [
+        "IMG-20251102-WA0003.jpg", "IMG-20251102-WA0041.jpg", "IMG-20251102-WA0098.jpg",
+        "IMG-20251102-WA0106.jpg", "IMG-20251102-WA0203.jpg"
+      ];
+      document.write(
+        generalImages.map(img =>
+          `<img src="assets/images/general/${img}" alt="${img}">`
+        ).join('')
+      );
+    </script>
+  </section>
 
-    <div id="gallery" class="gallery-grid" data-category="general"></div>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <div>Email: <a href="mailto:abavistaone@gmail.com">abavistaone@gmail.com</a></div>
-      <div>WhatsApp: <a href="https://wa.me/233591117057">+233 59 111 7057</a></div>
-    </div>
-  </footer>
-
-  <a id="wh-btn" class="wh-btn" href="https://wa.me/233591117057?text=Hello%20KingVista!%20I'm%20interested%20in%20a%20general%20product." target="_blank" rel="noopener">
-    <span class="wh-icon">💬</span>
-    <span class="wh-label">Chat on WhatsApp</span>
-  </a>
-
-  <div id="lightbox" class="lightbox" aria-hidden="true">
-    <button id="lb-close" class="lb-close">✕</button>
-    <img id="lb-img" src="" alt="Large view" />
-    <p id="lb-caption"></p>
-  </div>
-
-  <script src="assets/js/app.js"></script>
+  <footer><p>© 2025 KingVista</p></footer>
+  <a href="https://wa.me/233591117057" target="_blank" class="whatsapp-float">💬</a>
 </body>
 </html>
