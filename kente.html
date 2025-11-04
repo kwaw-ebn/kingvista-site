@@ -1,42 +1,258 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KingVista - African Fashion & Kente Styles</title>
-  <meta name="description" content="Explore KingVista – Your destination for authentic Kente, clothing, and African fashion collections. Contact us today!">
-  <meta name="keywords" content="KingVista, Kente, African Fashion, Ghana, Clothing, Boutique, Handmade">
-  <meta name="author" content="KingVista">
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>KingVista Enterprise — Kente Collection</title>
+  <meta name="description" content="KingVista Enterprise — Authentic Kente designs and custom weaves. Contact us to order or send your own design." />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" href="assets/images/favicon.png" />
+  <style>
+    /* Page-specific styles (keeps with the site palette) */
+    :root { --primary:#008037; --secondary:#0078d7; --light:#fff; --dark:#0b0b0b; }
+
+    .page-header {
+      background: linear-gradient(90deg,var(--primary),var(--secondary));
+      color: var(--light);
+      padding: 1rem 2rem;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+    .page-header .logo { font-weight:700; font-size:1.25rem; }
+
+    .intro {
+      background: #f7f9fb;
+      padding: 2rem;
+      text-align: center;
+    }
+    .intro h1 { color: var(--primary); font-size:1.9rem; margin-bottom:0.5rem; }
+    .intro p { color:#444; max-width:900px; margin:0.5rem auto 1rem; }
+
+    .actions { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-top:10px; }
+    .btn {
+      display:inline-block;
+      padding:10px 18px;
+      border-radius:24px;
+      font-weight:600;
+      text-decoration:none;
+      transition:transform .18s ease;
+    }
+    .btn-whatsapp { background:#25D366; color:#fff; }
+    .btn-contact { background:#fff; color:var(--primary); border:2px solid var(--primary); }
+
+    .gallery-wrap { padding:2rem; background:#fff; }
+    .gallery-grid {
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap:16px;
+      max-width:1200px;
+      margin:0 auto;
+    }
+    .gallery-item {
+      border-radius:10px;
+      overflow:hidden;
+      background:#f3f3f3;
+      cursor:pointer;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+      transition: transform .18s ease, box-shadow .18s ease;
+    }
+    .gallery-item img {
+      width:100%;
+      height:230px;
+      object-fit:cover;
+      display:block;
+    }
+    .gallery-item:hover { transform:translateY(-6px); box-shadow: 0 10px 22px rgba(0,0,0,0.12); }
+
+    /* Lightbox */
+    .lightbox {
+      position:fixed;
+      inset:0;
+      background: rgba(0,0,0,0.8);
+      display:none;
+      align-items:center;
+      justify-content:center;
+      z-index:2000;
+      padding:20px;
+    }
+    .lightbox.active { display:flex; }
+    .lightbox img { max-width:100%; max-height:85vh; border-radius:8px; box-shadow:0 6px 20px rgba(0,0,0,0.5); }
+    .lightbox .caption { color:#fff; margin-top:12px; text-align:center; font-size:0.95rem; }
+    .lightbox .close {
+      position:absolute; top:18px; right:20px; font-size:28px; color:#fff; cursor:pointer;
+      background:transparent; border:none;
+    }
+
+    .note {
+      text-align:center; color:#444; margin:18px auto 0; max-width:900px; font-size:0.95rem;
+    }
+
+    footer { margin-top:30px; }
+    @media (max-width:420px) {
+      .gallery-item img { height:170px; }
+      .intro h1 { font-size:1.6rem; }
+    }
+  </style>
 </head>
-<script src="assets/js/main.js"></script>
 <body>
-  <header>
-    <h1>Kente Collection</h1>
+  <!-- Header (keeps consistent with index style) -->
+  <header class="page-header">
+    <div class="logo">🌿 KingVista Enterprise</div>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="clothing.html">Clothing</a>
-      <a href="general.html">General</a>
-      <a href="contact.html">Contact</a>
+      <a href="index.html" style="color:#fff; text-decoration:none; margin-right:12px;">Home</a>
+      <a href="clothing.html" style="color:#fff; text-decoration:none; margin-right:12px;">Clothing</a>
+      <a href="general.html" style="color:#fff; text-decoration:none; margin-right:12px;">General</a>
+      <a href="contact.html" style="color:#fff; text-decoration:none;">Contact</a>
     </nav>
   </header>
 
-  <section class="gallery">
-    <script>
-      const kenteImages = [
-        "IMG-20251102-WA0025.jpg", "IMG-20251102-WA0026.jpg", "IMG-20251102-WA0027.jpg",
-        "IMG-20251102-WA0028.jpg", "IMG-20251102-WA0029.jpg", "IMG-20251102-WA0030.jpg"
-      ];
-      document.write(
-        kenteImages.map(img =>
-          `<img src="assets/images/kente/${img}" alt="${img}">`
-        ).join('')
-      );
-    </script>
+  <!-- Intro -->
+  <section class="intro">
+    <h1>KingVista Kente Collection</h1>
+    <p>
+      Discover our curated Kente designs — from classic royal patterns to contemporary weaves.
+      Each piece is chosen for quality and cultural authenticity. Want a custom design?
+      Send your design to us and we’ll craft it with care.
+    </p>
+
+    <div class="actions">
+      <!-- WhatsApp CTA -->
+      <a class="btn btn-whatsapp" href="https://wa.me/233591117057" target="_blank" rel="noopener">
+        <span style="margin-right:8px;">💬</span> Chat on WhatsApp
+      </a>
+
+      <!-- Contact page CTA -->
+      <a class="btn btn-contact" href="contact.html">
+        ✉️ Leave a message / Request a custom design
+      </a>
+    </div>
   </section>
 
-  <footer><p>© 2025 KingVista</p></footer>
-  <a href="https://wa.me/233XXXXXXXXX" target="_blank" class="whatsapp-float">💬</a>
+  <!-- Gallery -->
+  <section class="gallery-wrap">
+    <h2 style="text-align:center; color:var(--primary); margin-bottom:12px;">Our Featured Kente Designs</h2>
+    <p style="text-align:center; color:#666; margin-bottom:18px; max-width:900px; margin-left:auto; margin-right:auto;">
+      Tap any image to view larger. If you have your own design or special request, message us on WhatsApp or use the contact form.
+    </p>
+
+    <div class="gallery-grid" id="kente-gallery">
+      <!-- Add the listed images here -->
+      <div class="gallery-item" data-caption="Kente - Design IMG-20251102-WA0025">
+        <img src="assets/images/kente/IMG-20251102-WA0025.jpg" alt="Kente IMG-20251102-WA0025">
+      </div>
+      <div class="gallery-item" data-caption="Kente - Design IMG-20251102-WA0026">
+        <img src="assets/images/kente/IMG-20251102-WA0026.jpg" alt="Kente IMG-20251102-WA0026">
+      </div>
+      <div class="gallery-item" data-caption="Kente - Design IMG-20251102-WA0027">
+        <img src="assets/images/kente/IMG-20251102-WA0027.jpg" alt="Kente IMG-20251102-WA0027">
+      </div>
+      <div class="gallery-item" data-caption="Kente - Design IMG-20251102-WA0028">
+        <img src="assets/images/kente/IMG-20251102-WA0028.jpg" alt="Kente IMG-20251102-WA0028">
+      </div>
+      <div class="gallery-item" data-caption="Kente - Design IMG-20251102-WA0029">
+        <img src="assets/images/kente/IMG-20251102-WA0029.jpg" alt="Kente IMG-20251102-WA0029">
+      </div>
+      <div class="gallery-item" data-caption="Kente - Design IMG-20251102-WA0030">
+        <img src="assets/images/kente/IMG-20251102-WA0030.jpg" alt="Kente IMG-20251102-WA0030">
+      </div>
+      <div class="gallery-item" data-caption="Kente - Design IMG-20251102-WA0031">
+        <img src="assets/images/kente/IMG-20251102-WA0031.jpg" alt="Kente IMG-20251102-WA0031">
+      </div>
+      <div class="gallery-item" data-caption="Kente - Design IMG-20251102-WA0032">
+        <img src="assets/images/kente/IMG-20251102-WA0032.jpg" alt="Kente IMG-20251102-WA0032">
+      </div>
+      <div class="gallery-item" data-caption="Kente - Design IMG-20251102-WA0039">
+        <img src="assets/images/kente/IMG-20251102-WA0039.jpg" alt="Kente IMG-20251102-WA0039">
+      </div>
+      <div class="gallery-item" data-caption="Kente - Design IMG-20251102-WA0043">
+        <img src="assets/images/kente/IMG-20251102-WA0043.jpg" alt="Kente IMG-20251102-WA0043">
+      </div>
+      <div class="gallery-item" data-caption="Kente - Design IMG-20251102-WA0044">
+        <img src="assets/images/kente/IMG-20251102-WA0044.jpg" alt="Kente IMG-20251102-WA0044">
+      </div>
+      <div class="gallery-item" data-caption="Kente - Design IMG-20251102-WA0048">
+        <img src="assets/images/kente/IMG-20251102-WA0048.jpg" alt="Kente IMG-20251102-WA0048">
+      </div>
+
+      <!-- Example placeholder card to invite customers to submit their own design -->
+      <div class="gallery-item" id="custom-design-card" style="display:flex; align-items:center; justify-content:center; text-align:center; padding:20px;">
+        <div>
+          <strong style="display:block; margin-bottom:8px;">Have your own design?</strong>
+          <div style="font-size:0.95rem; color:#555; margin-bottom:10px;">Send us the design and we’ll make it happen.</div>
+          <a class="btn btn-whatsapp" href="https://wa.me/233591117057" target="_blank" rel="noopener" style="display:inline-block;padding:8px 12px;border-radius:20px;">Message on WhatsApp</a>
+          <br/><a href="contact.html" class="btn btn-contact" style="display:inline-block;margin-top:8px;padding:8px 12px;">Leave a request</a>
+        </div>
+      </div>
+    </div>
+
+    <p class="note">Want more images visible here? Add your photos into <code>assets/images/kente/</code> and they'll appear in the gallery after you add their <code>&lt;div class="gallery-item"&gt;</code> tags (or I can provide a dynamic loader next).</p>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="close" id="lightbox-close" aria-label="Close">&times;</button>
+    <div style="text-align:center;">
+      <img id="lightbox-img" src="" alt="expanded image" />
+      <div class="caption" id="lightbox-caption"></div>
+    </div>
+  </div>
+
+  <!-- Footer (consistent) -->
+  <footer>
+    <p>© 2025 KingVista Enterprise | <a href="mailto:abavistaone@gmail.com">abavistaone@gmail.com</a> |
+      <a href="https://www.facebook.com/KingvistaBusinessCenter" target="_blank">Facebook</a> |
+      <a href="https://wa.me/233591117057" target="_blank">WhatsApp</a>
+    </p>
+  </footer>
+
+  <!-- Shared site JS -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- Lightbox script -->
+  <script>
+    (function () {
+      const gallery = document.getElementById('kente-gallery');
+      const lightbox = document.getElementById('lightbox');
+      const lbImg = document.getElementById('lightbox-img');
+      const lbCaption = document.getElementById('lightbox-caption');
+      const lbClose = document.getElementById('lightbox-close');
+
+      // Open lightbox when clicking any gallery-item (delegation)
+      gallery.addEventListener('click', (e) => {
+        const item = e.target.closest('.gallery-item');
+        if (!item) return;
+        // If it's the custom-design card, do nothing (buttons already handle)
+        if (item.id === 'custom-design-card') return;
+
+        const img = item.querySelector('img');
+        if (!img) return;
+        lbImg.src = img.src;
+        lbImg.alt = img.alt || '';
+        lbCaption.textContent = item.dataset.caption || img.alt || '';
+        lightbox.classList.add('active');
+        lightbox.setAttribute('aria-hidden', 'false');
+      });
+
+      // Close functions
+      function closeLightbox() {
+        lightbox.classList.remove('active');
+        lightbox.setAttribute('aria-hidden', 'true');
+        lbImg.src = '';
+        lbCaption.textContent = '';
+      }
+
+      lbClose.addEventListener('click', closeLightbox);
+      lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) closeLightbox();
+      });
+
+      // Keyboard escape
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && lightbox.classList.contains('active')) closeLightbox();
+      });
+    })();
+  </script>
 </body>
 </html>
