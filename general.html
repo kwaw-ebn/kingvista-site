@@ -1,40 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KingVista - African Fashion & Kente Styles</title>
-  <meta name="description" content="Explore KingVista – Your destination for authentic Kente, clothing, and African fashion collections. Contact us today!">
-  <meta name="keywords" content="KingVista, Kente, African Fashion, Ghana, Clothing, Boutique, Handmade">
-  <meta name="author" content="KingVista">
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kente & General Designs Gallery | RootsLink Africa</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <script src="assets/js/main.js" defer></script>
 </head>
-<script src="assets/js/main.js"></script>
 <body>
-  <header>
-    <h1>General Collection</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="kente.html">Kente</a>
-      <a href="clothing.html">Clothing</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+  <header class="site-header">
+    <div class="container header-content">
+      <h1 class="logo">RootsLink Africa</h1>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="kente.html">Kente Designs</a>
+        <a href="general.html" class="active">General Designs</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <section class="gallery">
-    <script>
-      const generalImages = [
-        "IMG-20251102-WA0003.jpg", "IMG-20251102-WA0041.jpg", "IMG-20251102-WA0098.jpg",
-        "IMG-20251102-WA0106.jpg", "IMG-20251102-WA0203.jpg"
-      ];
-      document.write(
-        generalImages.map(img =>
-          `<img src="assets/images/general/${img}" alt="${img}">`
-        ).join('')
-      );
-    </script>
+  <section class="hero-section">
+    <div class="hero-content">
+      <h2>General Designs Collection</h2>
+      <p>Explore our latest handmade, customized, and unique design pieces. Contact us if you have your own design idea — we bring it to life.</p>
+      <a href="https://wa.me/233XXXXXXXXX" target="_blank" class="btn btn-whatsapp">Contact on WhatsApp</a>
+    </div>
   </section>
+
+  <section class="gallery-section">
+    <h3 class="section-title">Our Work Gallery</h3>
+    <div class="gallery-grid">
+      <!-- Auto-generated gallery -->
+      <!-- You can easily duplicate the <div> below for more photos -->
+      <div class="gallery-item"><img src="assets/images/IMG-20251102-WA0000.jpg" alt="Design 0000"></div>
+      <div class="gallery-item"><img src="assets/images/IMG-20251102-WA0001.jpg" alt="Design 0001"></div>
+      <div class="gallery-item"><img src="assets/images/IMG-20251102-WA0002.jpg" alt="Design 0002"></div>
+      <div class="gallery-item"><img src="assets/images/IMG-20251102-WA0003.jpg" alt="Design 0003"></div>
+      <div class="gallery-item"><img src="assets/images/IMG-20251102-WA0004.jpg" alt="Design 0004"></div>
+      <!-- Continue up to 0244 -->
+    </div>
+  </section>
+
+  <section id="contact" class="contact-section">
+    <h3 class="section-title">Get in Touch</h3>
+    <p>Have a design in mind? Share your idea and let’s create something special together.</p>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Email Address" required />
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn btn-primary">Send Message</button>
+    </form>
+    <p class="whatsapp-note">Or message us directly on <a href="https://wa.me/233XXXXXXXXX" target="_blank">WhatsApp</a>.</p>
+  </section>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 RootsLink Africa. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
 
   <footer><p>© 2025 KingVista</p></footer>
   <a href="https://wa.me/233591117057" target="_blank" class="whatsapp-float">💬</a>
