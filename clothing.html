@@ -3,39 +3,125 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KingVista - African Fashion & Kente Styles</title>
-  <meta name="description" content="Explore KingVista – Your destination for authentic Kente, clothing, and African fashion collections. Contact us today!">
-  <meta name="keywords" content="KingVista, Kente, African Fashion, Ghana, Clothing, Boutique, Handmade">
-  <meta name="author" content="KingVista">
+  <title>KingVista Enterprise | Clothing Collection</title>
   <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <style>
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.5)),
+        url('assets/images/general/IMG-20251102-WA0041.jpg') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+    }
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+      opacity: 0.9;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 40px 20px;
+    }
+    .gallery img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+    }
+    .cta {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .cta a {
+      background: #0a7b83;
+      color: white;
+      padding: 14px 30px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: background 0.3s;
+    }
+    .cta a:hover {
+      background: #055b5f;
+    }
+  </style>
 </head>
-<script src="assets/js/main.js"></script>
 <body>
-  <header>
-    <h1>Clothing Collection</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="kente.html">Kente</a>
-      <a href="general.html">General</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <h2 class="logo">KingVista <span style="color:#0a7b83;">Enterprise</span></h2>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="kente.html">Kente</a>
+        <a href="clothing.html" class="active">Clothing</a>
+        <a href="general.html">General Goods</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <section class="gallery">
-    <!-- Auto list all clothing images -->
-    <script>
-      const clothingImages = [
-        "IMG-20251102-WA0000.jpg", "IMG-20251102-WA0001.jpg", "IMG-20251102-WA0002.jpg",
-        "IMG-20251102-WA0003.jpg", "IMG-20251102-WA0004.jpg", "IMG-20251102-WA0005.jpg"
-      ];
-      document.write(
-        clothingImages.map(img => 
-          `<img src="assets/images/clothing/${img}" alt="${img}">`
-        ).join('')
-      );
-    </script>
+  <!-- Hero -->
+  <section class="hero">
+    <h1>KingVista Clothing</h1>
+    <p>Where elegance meets creativity. Explore our unique selection of locally inspired and imported outfits — crafted for style, comfort, and confidence.</p>
   </section>
+
+  <!-- Gallery -->
+  <section class="gallery">
+    <img src="assets/images/clothing/IMG-20251102-WA0003.jpg" alt="Clothing 1">
+    <img src="assets/images/clothing/IMG-20251102-WA0004.jpg" alt="Clothing 2">
+    <img src="assets/images/clothing/IMG-20251102-WA0005.jpg" alt="Clothing 3">
+    <img src="assets/images/clothing/IMG-20251102-WA0017.jpg" alt="Clothing 4">
+    <img src="assets/images/clothing/IMG-20251102-WA0034.jpg" alt="Clothing 5">
+    <img src="assets/images/clothing/IMG-20251102-WA0041.jpg" alt="Clothing 6">
+    <img src="assets/images/clothing/IMG-20251102-WA0045.jpg" alt="Clothing 7">
+    <img src="assets/images/clothing/IMG-20251102-WA0090.jpg" alt="Clothing 8">
+    <img src="assets/images/clothing/IMG-20251102-WA0091.jpg" alt="Clothing 9">
+    <img src="assets/images/clothing/IMG-20251102-WA0097.jpg" alt="Clothing 10">
+    <img src="assets/images/clothing/IMG-20251102-WA0098.jpg" alt="Clothing 11">
+    <img src="assets/images/clothing/IMG-20251102-WA0099.jpg" alt="Clothing 12">
+    <img src="assets/images/clothing/IMG-20251102-WA0100.jpg" alt="Clothing 13">
+    <img src="assets/images/clothing/IMG-20251102-WA0101.jpg" alt="Clothing 14">
+    <img src="assets/images/clothing/IMG-20251102-WA0102.jpg" alt="Clothing 15">
+    <img src="assets/images/clothing/IMG-20251102-WA0106.jpg" alt="Clothing 16">
+    <img src="assets/images/clothing/IMG-20251102-WA0115.jpg" alt="Clothing 17">
+    <img src="assets/images/clothing/IMG-20251102-WA0119.jpg" alt="Clothing 18">
+    <img src="assets/images/clothing/IMG-20251102-WA0125.jpg" alt="Clothing 19">
+    <img src="assets/images/clothing/IMG-20251102-WA0178.jpg" alt="Clothing 20">
+    <img src="assets/images/clothing/IMG-20251102-WA0203.jpg" alt="Clothing 21">
+    <img src="assets/images/clothing/IMG-20251102-WA0207.jpg" alt="Clothing 22">
+    <img src="assets/images/clothing/IMG-20251102-WA0209.jpg" alt="Clothing 23">
+    <img src="assets/images/clothing/IMG-20251102-WA0236.jpg" alt="Clothing 24">
+  </section>
+
+  <!-- CTA -->
+  <div class="cta">
+    <p>Have your own fabric or design idea? We’ll make it real.</p>
+    <a href="https://wa.me/233XXXXXXXXX" target="_blank">Contact Us on WhatsApp</a>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 KingVista Enterprise. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
 
   <footer><p>© 2025 KingVista</p></footer>
   <a href="https://wa.me/233591117057" target="_blank" class="whatsapp-float">💬</a>
